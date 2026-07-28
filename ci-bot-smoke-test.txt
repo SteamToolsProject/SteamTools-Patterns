@@ -1,2 +1,0 @@
-Temporary CI Bot smoke-test marker.
-This file is removed by a second automated merge after verification.
