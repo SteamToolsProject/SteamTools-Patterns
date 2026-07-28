@@ -1,0 +1,62 @@
+name: merge-pattern-update
+
+on:
+  repository_dispatch:
+    types:
+      - steam-patterns-ready
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: merge-pattern-update
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PATTERN_CHANNEL: ${{ github.event.client_payload.channel || 'stable' }}
+      STEAM_BUILD: ${{ github.event.client_payload.steam_build || 'unknown' }}
+    steps:
+      - name: Create or reuse update pull request
+        id: pull_request
+        shell: bash
+        run: |
+          set -euo pipefail
+          pr_number=$(gh pr list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state open \
+            --head automation/steam-patterns \
+            --base main \
+            --json number \
+            --jq '.[0].number // empty')
+
+          if [[ -z "$pr_number" ]]; then
+            pr_url=$(gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head automation/steam-patterns \
+              --title "chore(patterns): update Steam $PATTERN_CHANNEL $STEAM_BUILD" \
+              --body "Automated pattern generation for Steam build \`$STEAM_BUILD\`. Candidates passed generation and local PE/signature validation.")
+            pr_number="${pr_url##*/}"
+          fi
+
+          echo "number=$pr_number" >> "$GITHUB_OUTPUT"
+          echo "PR #$pr_number created or reused by $GITHUB_ACTOR"
+
+      - name: Enable squash auto-merge
+        env:
+          PR_NUMBER: ${{ steps.pull_request.outputs.number }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh pr merge "$PR_NUMBER" \
+            --repo "$GITHUB_REPOSITORY" \
+            --auto \
+            --squash \
+            --delete-branch
