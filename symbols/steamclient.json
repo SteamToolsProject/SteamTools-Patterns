@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "component": "steamclient",
+  "symbols": [
+    {"name": "BBuildAndAsyncSendFrame", "required": true, "signature_required": true},
+    {"name": "BuildDepotDependency", "required": true, "signature_required": true},
+    {"name": "BuildSpawnEnvBlock", "required": true, "signature_required": true},
+    {"name": "CUtlBufferEnsureCapacity", "required": true, "signature_required": true},
+    {"name": "CUtlMemoryGrow", "required": true, "signature_required": true},
+    {"name": "CheckAppOwnership", "required": true, "signature_required": true},
+    {"name": "CloseAppCloud", "required": true, "signature_required": true},
+    {"name": "ConfigStoreGetBinary", "required": true, "signature_required": true},
+    {"name": "GetAppDataFromAppInfo", "required": true, "signature_required": true},
+    {"name": "GetAppIDForCurrentPipe", "required": true, "signature_required": true},
+    {"name": "GetOrAddAppData", "required": true, "signature_required": true},
+    {"name": "GetPackageInfo", "required": true, "signature_required": true},
+    {"name": "GetPipeClient", "required": true, "signature_required": true},
+    {"name": "IPCProcessMessage", "required": true, "signature_required": true},
+    {"name": "KeyValues_FindOrCreateKey", "required": true, "signature_required": true},
+    {"name": "KeyValues_ReadAsBinary", "required": true, "signature_required": true},
+    {"name": "LoadDepotDecryptionKey", "required": true, "signature_required": true},
+    {"name": "LoadPackage", "required": false, "signature_required": true},
+    {"name": "MarkLicenseAsChanged", "required": true, "signature_required": true},
+    {"name": "OptedInMask", "required": true, "signature_required": true},
+    {"name": "PchMsgNameFromEMsg", "required": true, "signature_required": true},
+    {"name": "ProcessPendingLicenseUpdates", "required": true, "signature_required": true},
+    {"name": "RecvPkt", "required": true, "signature_required": true},
+    {"name": "SendCallbackToPipe", "required": true, "signature_required": true},
+    {"name": "SpawnProcess", "required": true, "signature_required": true}
+  ]
+}

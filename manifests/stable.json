@@ -1,0 +1,17 @@
+{
+  "channel": "stable",
+  "components": {
+    "steamclient": {
+      "dll": "steamclient64.dll",
+      "pattern": "steamclient/52ff7a513f8d5913a185ac8820eadb17d6e8e4144cd8fff36cc5bae6fa9d3fee.toml",
+      "sha256": "52ff7a513f8d5913a185ac8820eadb17d6e8e4144cd8fff36cc5bae6fa9d3fee"
+    },
+    "steamui": {
+      "dll": "steamui.dll",
+      "pattern": "steamui/55a42fc091aee1aa68e6901f3647d732c30f1ad7aeb037ec7b0c425e8029defd.toml",
+      "sha256": "55a42fc091aee1aa68e6901f3647d732c30f1ad7aeb037ec7b0c425e8029defd"
+    }
+  },
+  "schema": 1,
+  "steam_build": "1785187029"
+}

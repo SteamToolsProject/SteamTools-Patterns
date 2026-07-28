@@ -1,0 +1,10 @@
+*.dll
+*.dmp
+*.exe
+*.pdb
+*.zip
+*.part
+__pycache__/
+.venv/
+reports/
+artifacts/

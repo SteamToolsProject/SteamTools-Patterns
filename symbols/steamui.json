@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "component": "steamui",
+  "symbols": [
+    {"name": "AddProtobufAsBinary", "required": true, "signature_required": true},
+    {"name": "BuildCompleteAppOverviewChange", "required": true, "signature_required": true},
+    {"name": "CSteamUIAppControllerRunFrame", "required": true, "signature_required": true},
+    {"name": "FillInAppOverview", "required": true, "signature_required": true},
+    {"name": "GetAppByID", "required": true, "signature_required": true},
+    {"name": "GetTopManager", "required": true, "signature_required": true},
+    {"name": "LoadModuleWithPath", "required": true, "signature_required": true},
+    {"name": "MarkAppChange", "required": true, "signature_required": true},
+    {"name": "RepeatedFieldUint32_Add", "required": true, "signature_required": true},
+    {"name": "ShouldShowAppInLibrary", "required": true, "signature_required": true}
+  ]
+}
