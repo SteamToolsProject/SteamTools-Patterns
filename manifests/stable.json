@@ -3,15 +3,15 @@
   "components": {
     "steamclient": {
       "dll": "steamclient64.dll",
-      "pattern": "steamclient/86112382982fa855086f566b2fb8343290e798849029337dcfeecba0d5051b5e.toml",
-      "sha256": "86112382982fa855086f566b2fb8343290e798849029337dcfeecba0d5051b5e"
+      "pattern": "steamclient/caba4826aa3501039d095aee1843a6bfb270fb43a3ab4455b2d6733223579fee.toml",
+      "sha256": "caba4826aa3501039d095aee1843a6bfb270fb43a3ab4455b2d6733223579fee"
     },
     "steamui": {
       "dll": "steamui.dll",
-      "pattern": "steamui/af6ca9193dd6d502fad83d4a51ea29fe156699c2dfcf5739f9f70ca659d2b83d.toml",
-      "sha256": "af6ca9193dd6d502fad83d4a51ea29fe156699c2dfcf5739f9f70ca659d2b83d"
+      "pattern": "steamui/cb387adefbbac64a3c1490d4275d00daf3a1e0219b4580726ef7681db7429278.toml",
+      "sha256": "cb387adefbbac64a3c1490d4275d00daf3a1e0219b4580726ef7681db7429278"
     }
   },
   "schema": 1,
-  "steam_build": "1785799196"
+  "steam_build": "1788400362"
 }
